@@ -1,6 +1,11 @@
-import React from 'react';
+import './StaticCard.css';
 
-function StaticCard({ position, digit }: { position: any; digit: any }) {
+interface IStaticCardProps {
+  position: 'upperCard' | 'lowerCard';
+  digit: string;
+}
+
+function StaticCard({ position, digit }: IStaticCardProps) {
   return (
     <div className={position}>
       <span>{digit}</span>

@@ -1,6 +1,9 @@
-import React from 'react';
+interface IAnimationCardProps {
+  animation: 'fold' | 'unfold';
+  digit: string;
+}
 
-function AnimatedCard({ animation, digit }: { animation: any; digit: any }) {
+function AnimatedCard({ animation, digit }: IAnimationCardProps) {
   return (
     <div className={`flipCard ${animation}`}>
       <span>{digit}</span>

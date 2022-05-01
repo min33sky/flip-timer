@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import FlipUnitContainer from './FlipUnitContainer';
+import './FlipClock.css';
 
 function FlipClock() {
   const [hours, setHours] = useState(0);
@@ -15,9 +16,8 @@ function FlipClock() {
      * 시간 업데이트
      */
     const updateTime = () => {
-      // get new date
+      //* 현재 시간 가져오기
       const time = new Date();
-      // set time units
       const currentHours = time.getHours();
       const currentMinutes = time.getMinutes();
       const currentSeconds = time.getSeconds();
@@ -41,7 +41,7 @@ function FlipClock() {
       }
     };
 
-    timerIdRef.current = setInterval(() => updateTime(), 50);
+    timerIdRef.current = setInterval(() => updateTime(), 500);
 
     return () => {
       if (timerIdRef.current) {

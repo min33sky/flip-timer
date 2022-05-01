@@ -1,0 +1,12 @@
+header {
+  display: flex;
+  position: relative;
+}
+
+header h1 {
+  font-family: 'Droid Sans Mono', monospace;
+  font-weight: lighter;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: white;
+}
